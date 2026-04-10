@@ -82,9 +82,10 @@ COMANDOS=(
 )
 
 for cmd in "${COMANDOS[@]}"; do
+    history -s "$cmd"
     eval "$cmd"
 done
 
 #  chmod +x anot.sh (não usar no modo adm, opcional)
-#  source anot.sh (coloque espaço antes do comando)
+#  (source ou .) anot.sh (coloque espaço antes do comando)
 # history | grep "RESUMO"
